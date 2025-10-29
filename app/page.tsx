@@ -1,6 +1,5 @@
 import Intro from "@/components/intro";
 import {MDXRemote} from "next-mdx-remote/rsc";
-
 import Project from "./project/page";
 import Education from "./education/page";
 import Skills from "@/components/skills";
