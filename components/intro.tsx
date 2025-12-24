@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function Intro() {
   return (
@@ -11,14 +11,14 @@ export default function Intro() {
         </p>
       </div>
       <div className="relative flex-1 md:flex-none pr-10">
-        <Image
+        {/* <Image
           className="rounded-lg grayscale"
           src="/niqaab.jpg"
           alt="author"
           width={255}
           height={185}
           priority
-        />
+        /> */}
       </div>
     </section>
   );
