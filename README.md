@@ -40,19 +40,4 @@ It is built with performance, responsiveness, and developer experience in mind.
 | Tools         | Git, GitHub |
 | AI/Agents     | LangChain, LangGraph (learning phase) |
 
----
 
-## 🧩 Getting Started (Run Locally)
-
-```bash
-# Clone repository
-git clone <your-repo-url>
-
-# Navigate into folder
-cd portfolio
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
