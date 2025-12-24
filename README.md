@@ -3,7 +3,7 @@
 Welcome to my personal portfolio!  
 This project showcases my work as a *Frontend Developer* currently learning to build *AI Agents*. It highlights my skills, projects, and experience in modern web technologies.
 
-🚀 Live Demo: (Add your deployed link here)
+🚀 Live Demo: ((https://my-portfolio-git-main-khadija3111s-projects.vercel.app/))
 
 ---
 
