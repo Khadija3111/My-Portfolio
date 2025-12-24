@@ -4,6 +4,13 @@ export default function Projects() {
   const projects = [
    
     {
+      title: "Physical AI and Humanoid Robotics E-BOOK ",
+      link: "https://github.com/Khadija3111/Physical-AI---Humanoid-Robotics-Book",
+      desc: " An interactive technical e-book on Physical AI and humanoid Robotics made using speckitPlus , gemini CLI mainly ,a fully functional RAG-powered chatbot has been implemented to support interactive learning. ",
+      
+   
+    },
+    {
       title: "E-Commerce Furniture Store",
       link: "https://github.com/Khadija3111/E-com-web-furino",
       desc: "A modern and responsive eCommerce frontend built with Next.js, Tailwind, and clean UI components."
@@ -46,7 +53,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="px-6 py-16" id="projects">
+    <section className="px-6 py-18" id="projects">
       <h2 className="text-3xl font-bold mb-8">Projects</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

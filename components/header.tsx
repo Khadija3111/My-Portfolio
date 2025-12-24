@@ -61,7 +61,7 @@ export default function Header() {
             <Link href='/education'>Eductaion</Link>
           </li>
           <li className='transition-colors hover:text-foreground'>
-            <Link href='/projects'>Projects</Link>
+            <Link href='/project'>Projects</Link>
           </li>
           
           

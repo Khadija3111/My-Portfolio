@@ -13,7 +13,7 @@ const educationData: EducationItem[] = [
   {
     institution: "Khursheed Govt Girls Degree College",
     degree: "Intermediate in Medical Science",
-    year: "2022 – 2024",
+    year: "2021 – 2023",
   },
   {
     institution: "Governor Sindh Initiative, GIAIC",
@@ -23,7 +23,7 @@ const educationData: EducationItem[] = [
   {
     institution: "Jamia Al Marifa Al Alamiya",
     degree: "B.Sc. (Hons) in Islamic Studies",
-    year: "2021 – Present",
+    year: "2023 – Present",
   },
 ];
 
