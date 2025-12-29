@@ -35,11 +35,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex  min-h-screen  flex-col font-sans antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col font-sans antialiased`}
       >
         <Providers>
           <Header />
-          <main className="grow">{children}</main>
+          <main className="grow pt-16">{children}</main>
           <Footer />
         </Providers>
       </body>

@@ -2,13 +2,13 @@ import { ExternalLink } from "lucide-react";
 
 export default function Projects() {
   const projects = [
-   
+
     {
       title: "Physical AI and Humanoid Robotics E-BOOK ",
       link: "https://github.com/Khadija3111/Physical-AI---Humanoid-Robotics-Book",
       desc: " An interactive technical e-book on Physical AI and humanoid Robotics made using speckitPlus , gemini CLI mainly ,a fully functional RAG-powered chatbot has been implemented to support interactive learning. ",
-      
-   
+
+
     },
     {
       title: "E-Commerce Furniture Store",
@@ -28,7 +28,7 @@ export default function Projects() {
     {
       title: "ChatBot with Chainlit ",
       link: "https://github.com/Khadija3111/Chatbot",
-      desc: " a conversational chatbot built using Chainlit and Google’s Gemini 2.0 Flash model. It supports session-based memory and optionally OAuth for user authentication. This project is ready for deployment and can be easily customized or extended. "
+      desc: " a conversational chatbot built using Chainlit and Google's Gemini 2.0 Flash model. It supports session-based memory and optionally OAuth for user authentication. This project is ready for deployment and can be easily customized or extended. "
     },
     {
       title: "Secure Data enscription App",
@@ -53,24 +53,24 @@ export default function Projects() {
   ];
 
   return (
-    <section className="px-6 py-18" id="projects">
-      <h2 className="text-3xl font-bold mb-8">Projects</h2>
+    <section className="px-4 sm:px-6 py-12 sm:py-16" id="projects">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Projects</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
         {projects.map((proj) => (
           <a
             key={proj.title}
             href={proj.link}
             target="_blank"
-            className="group border border-border p-5 rounded-xl hover:shadow-lg transition-all duration-300 bg-card"
+            className="group border border-border p-4 sm:p-5 rounded-xl hover:shadow-lg transition-all duration-300 bg-card"
           >
             <div className="flex items-center gap-2">
-              <h3 className="text-xl font-semibold group-hover:text-blue-500 transition-colors">
+              <h3 className="text-lg sm:text-xl font-semibold group-hover:text-blue-500 transition-colors">
                 {proj.title}
               </h3>
-              <ExternalLink size={18} className="opacity-60 group-hover:opacity-100" />
+              <ExternalLink size={14} className="opacity-60 group-hover:opacity-100" />
             </div>
-            <p className="text-muted-foreground text-sm mt-3">
+            <p className="text-muted-foreground text-sm mt-2 sm:mt-3">
               {proj.desc}
             </p>
           </a>

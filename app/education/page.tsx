@@ -31,37 +31,37 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="py-16  scroll-mt-20"
+      className="py-12 sm:py-16 scroll-mt-20"
     >
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="flex items-center gap-3 mb-10">
-          <GraduationCap className="w-8 h-8 text-violet-500" />
-          <h2 className="text-3xl  tracking-tight font-extrabold">
+        <div className="flex items-center gap-3 mb-8 sm:mb-10">
+          <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-violet-500" />
+          <h2 className="text-2xl sm:text-3xl tracking-tight font-extrabold">
             Education
           </h2>
         </div>
 
         {/* Education Cards */}
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {educationData.map((edu, index) => (
             <div
               key={index}
-              className="group relative border border-white/10 bg-white/5 hover:bg-white/10 
-              transition-all duration-300 rounded-2xl p-6 shadow-md"
+              className="group relative border border-white/10 bg-white/5 hover:bg-white/10
+              transition-all duration-300 rounded-2xl p-4 sm:p-6 shadow-md"
             >
               {/* Accent bar */}
               <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-gradient-to-b from-violet-500 to-blue-500 opacity-70 group-hover:opacity-100 transition-opacity" />
 
-              <div className="pl-5">
-                <h3 className="text-lg font-bold">
+              <div className="pl-4 sm:pl-5">
+                <h3 className="text-base sm:text-lg font-bold">
                   {edu.institution}
                 </h3>
-                <p className="text-gray-400 mt-1 text-sm font-medium">
+                <p className="text-gray-400 mt-1 text-sm">
                   {edu.degree}
                 </p>
                 {edu.year && (
-                  <p className="text-xs text-gray-500 mt-2">{edu.year}</p>
+                  <p className="text-xs sm:text-sm text-gray-500 mt-2">{edu.year}</p>
                 )}
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function Education() {
         </div>
 
         {/* Optional Quote or Note */}
-        <p className="text-gray-500 text-sm mt-10 border-t border-white/10 pt-6 text-center">
+        <p className="text-gray-500 text-xs sm:text-sm mt-8 sm:mt-10 border-t border-white/10 pt-4 sm:pt-6 text-center">
           Lifelong learner with a passion for connecting education, technology,
           and intelligent systems.
         </p>

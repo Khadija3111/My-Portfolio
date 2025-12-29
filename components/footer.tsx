@@ -42,10 +42,13 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className='py-8  pl-30'>
-      <div className='container max-w-3xl'>
-        <div className='md:flex md:items-center md:justify-between'>
-          <div className='flex justify-center space-x-9 md:order-2'>
+    <footer className='py-6 sm:py-8 px-4'>
+      <div className='container max-w-6xl mx-auto'>
+        <div className='flex flex-col items-center space-y-4 sm:space-y-0 sm:flex-row sm:items-center sm:justify-between'>
+          <div className='text-center sm:text-left text-sm text-muted-foreground'>
+            © {new Date().getFullYear()} Khadija Abdulbasit. All rights reserved.
+          </div>
+          <div className='flex justify-center space-x-4 sm:space-x-6'>
             {navigation.map(item => (
               <a
                 key={item.name}
@@ -55,12 +58,10 @@ export default function Footer() {
                 className='text-muted-foreground hover:text-foreground'
               >
                 <span className='sr-only'>{item.name}</span>
-                <item.icon aria-hidden='true' className='h-5 w-5' />
+                <item.icon aria-hidden='true' className='h-4 w-4 sm:h-5 sm:w-5' />
               </a>
             ))}
           </div>
-          
-          
         </div>
       </div>
     </footer>
