@@ -9,7 +9,8 @@ export default function Home() {
 
  My focus is on creating products that are not only visually polished, but also smart, reliable, and practical.
 
- I actively build full-stack applications, connecting modern frontends with FastAPI backends, PostgreSQL databases, authentication, and deployed cloud services. I’m comfortable taking a product from idea to production—designing interfaces, building APIs, integrating data, and shipping real features.
+ I actively build full-stack applications, connecting modern frontends with FastAPI backends, PostgreSQL databases, authentication, and deployed cloud services. I’m comfortable taking a product from idea to production—designing interfaces,
+  building APIs, integrating data, and shipping real features.
 
  Recently, I’ve been working with AI agents and intelligent systems, building assistants that use structured prompts, tools, memory, and guardrails to solve real problems. I enjoy merging AI capabilities with usable interfaces so products don’t just look good—but work intelligently.
  
