@@ -5,7 +5,7 @@ import Education from "./education/page";
 import Skills from "@/components/skills";
 
 export default function Home() {
-  const content = `I’m a frontend-focused developer who builds smooth, intuitive, and scalable web experiences. My core stack includes Next.js, TypeScript, JavaScript, Tailwind CSS, and Sanity CMS, with a strong emphasis on clean UI, performance, and maintainable code.
+  const content = `I’m a developer with experience building full-stack web applications, AI agents, and production-ready systems. My core frontend stack includes Next.js, TypeScript, JavaScript, Tailwind CSS, and Sanity CMS, but I also design and implement backends, databases, and cloud deployments.
 
  My focus is on creating products that are not only visually polished, but also smart, reliable, and practical.
 
