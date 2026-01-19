@@ -6,8 +6,7 @@ export default function Intro() {
       <div className="mt-2 flex-1 md:mt-0 w-full">
         <h1 className="title no-underline text-center sm:text-left">Hey, I'm Khadija.</h1>
         <p className="mt-2 font-light text-muted-foreground text-center sm:text-left">
-          I'm a Frontend developer and I build AI Agents based in Karachi, Pakistan.
-          I craft interfaces that connect humans and intelligent systems.
+        “I build full-stack, AI-powered web applications with a strong focus on frontend and intelligent systems.”
         </p>
       </div>
       <div className="relative flex-1 md:flex-none pr-0 sm:pr-10 w-full sm:w-auto">

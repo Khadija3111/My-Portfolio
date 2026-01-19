@@ -8,7 +8,6 @@ export default function Projects() {
       link: "https://github.com/Khadija3111/Physical-AI---Humanoid-Robotics-Book",
       desc: " An interactive technical e-book on Physical AI and humanoid Robotics made using speckitPlus , gemini CLI mainly ,a fully functional RAG-powered chatbot has been implemented to support interactive learning. ",
 
-
     },
     {
       title: "E-Commerce Furniture Store",
@@ -50,6 +49,17 @@ export default function Projects() {
       link: "https://github.com/Khadija3111/presonal-lib-manager",
       desc: "if you love reading books then this personal library manager is for you ."
     },
+    {
+      title: "Physical AI & Humanoid Robotics — AI-Native Textbook + RAG Chatbot",
+      link: "https://github.com/Khadija3111/Physical-AI---Humanoid-Robotics-Book",
+      desc: "AI-native robotics textbook built with spec-driven documentation and deployed on Vercel, paired with a RAG chatbot using FastAPI, Qdrant, Cohere, and OpenAI Agents SDK for content-grounded question answering."
+    },
+    {
+  title: "The Evolution of Todo — Spec-Driven Full-Stack App + AI Agent",
+  link: "https://github.com/Khadija3111/TODO-APP",
+  desc: "A full-stack Todo application built using spec-driven development and modern web technologies (Next.js, TypeScript, Tailwind CSS, FastAPI, PostgreSQL). Includes AI agent features for task management, automated reminders, and smart prioritization. The project demonstrates end-to-end design, deployment, and integration of AI workflows in a practical web product."
+ },
+
   ];
 
   return (

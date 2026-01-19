@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 
-type SkillCategory = "frontend" | "ai" | "tools";
+type SkillCategory = "frontend" | "ai" |"backend"| "devops"|"tools";
 
 interface Skill {
   name: string;
@@ -20,7 +20,23 @@ const skills: Skill[] = [
   { name: "AI Agents (OpenAI Agents SDK)", sub: "Prototyping assistants & pipelines", level: 75, category: "ai" },
   { name: "OpenAI & Prompting", sub: "Prompt design & system messages", level: 70, category: "ai" },
   { name: "SANITY CMS", sub: "", level: 50, category: "tools" },
- 
+  { name: "FastAPI", sub: "REST APIs & async endpoints", level: 70, category: "backend" },
+  { name: "API Design", sub: "OpenAPI, request/response modeling", level: 72, category: "backend" },
+  { name: "Authentication", sub: "JWT, OAuth basics", level: 65, category: "backend" },
+  { name: "Backend Architecture", sub: "Layered & modular design", level: 60, category: "backend" },
+  { name: "PostgreSQL", sub: "Schema design & queries", level: 60, category: "backend" },
+  { name: "SQLModel / SQLAlchemy", sub: "ORM & data modeling", level: 58, category: "backend" },
+  { name: "Vector Databases", sub: "Embeddings & semantic search", level: 55, category: "ai" },
+  { name: "Git & GitHub", sub: "Branching, PRs, collaboration", level: 70, category: "tools" },
+  { name: "Docker", sub: "Containerizing apps", level: 60, category: "devops" },
+  { name: "Docker Compose", sub: "Multi-service setups", level: 55, category: "devops" },
+  { name: "Cloud Deployment", sub: "Railway, Vercel, Cloud Run", level: 58, category: "devops" },
+  { name: "Pytest", sub: "Unit & API testing", level: 55, category: "tools" },
+  { name: "Spec-Driven Development", sub: "Building from specifications", level: 65, category: "tools" },
+
+
+
+
   
 ];
 
@@ -28,6 +44,7 @@ const categories: { label: string; value: SkillCategory | "all" }[] = [
   { label: "All", value: "all" },
   { label: "Frontend", value: "frontend" },
   { label: "AI & Agents", value: "ai" },
+  { label: "Backend", value: "backend" },
   { label: "Tools", value: "tools" },
 ];
 

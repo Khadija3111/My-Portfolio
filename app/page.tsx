@@ -5,12 +5,15 @@ import Education from "./education/page";
 import Skills from "@/components/skills";
 
 export default function Home() {
-  const content = `I am a Frontend Developer passionate about building smooth, intuitive, and scalable web experiences.
-I specialize in Next.js, TypeScript, JavaScript, Tailwind CSS, and Sanity CMS—creating interfaces that balance clean design and solid performance.
+  const content = `I’m a frontend-focused developer who builds smooth, intuitive, and scalable web experiences. My core stack includes Next.js, TypeScript, JavaScript, Tailwind CSS, and Sanity CMS, with a strong emphasis on clean UI, performance, and maintainable code.
 
-Recently, I’ve been exploring the exciting world of AI Agents and intelligent systems, learning to merge front-end interfaces with smart backend logic—building products that not only look great but think smart.
+ My focus is on creating products that are not only visually polished, but also smart, reliable, and practical.
 
-Beyond coding, I love understanding how people interact with technology and continuously improving how digital experiences feel and function.`;
+ I actively build full-stack applications, connecting modern frontends with FastAPI backends, PostgreSQL databases, authentication, and deployed cloud services. I’m comfortable taking a product from idea to production—designing interfaces, building APIs, integrating data, and shipping real features.
+
+ Recently, I’ve been working with AI agents and intelligent systems, building assistants that use structured prompts, tools, memory, and guardrails to solve real problems. I enjoy merging AI capabilities with usable interfaces so products don’t just look good—but work intelligently.
+ 
+ I’m looking for opportunities where I can contribute to real products, grow as a full-stack developer, and build intelligent systems that create real value.`;
 
   return (
     <section
