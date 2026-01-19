@@ -39,7 +39,7 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-          <main className="grow pt-16">{children}</main>
+          <main className="grow pt-8">{children}</main>
           <Footer />
         </Providers>
       </body>

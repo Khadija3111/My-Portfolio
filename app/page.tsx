@@ -7,9 +7,7 @@ import Skills from "@/components/skills";
 export default function Home() {
   const content = `I’m a developer with experience building full-stack web applications, AI agents, and production-ready systems. My core frontend stack includes Next.js, TypeScript, JavaScript, Tailwind CSS, and Sanity CMS, but I also design and implement backends, databases, and cloud deployments.
 
- My focus is on creating products that are not only visually polished, but also smart, reliable, and practical.
-
- I actively build full-stack applications, connecting modern frontends with FastAPI backends, PostgreSQL databases, authentication, and deployed cloud services. I’m comfortable taking a product from idea to production—designing interfaces,
+ I actively build full-stack applications, connecting modern frontends with FastAPI backends, PostgreSQL databases, authentication, and deployed cloud services. 
   building APIs, integrating data, and shipping real features.
 
  Recently, I’ve been working with AI agents and intelligent systems, building assistants that use structured prompts, tools, memory, and guardrails to solve real problems. I enjoy merging AI capabilities with usable interfaces so products don’t just look good—but work intelligently.
@@ -43,12 +41,10 @@ export default function Home() {
               text-3xl        /* mobile */
               md:text-4xl     /* laptop */
               font-black
-              pb-6
-              md:pb-11
+              pb-1
+              md:pb-6
             
-            "
-          >
-            About Me
+            ">  About Me
           </h1>
 
           <MDXRemote source={content} />

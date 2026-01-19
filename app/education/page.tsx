@@ -33,7 +33,7 @@ export default function Education() {
       id="education"
       className="py-12 sm:py-16 scroll-mt-20"
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="flex items-center gap-3 mb-8 sm:mb-10">
           <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-violet-500" />

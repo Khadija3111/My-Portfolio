@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
 type SkillCategory = "frontend" | "ai" |"backend"| "devops"|"tools";
 
@@ -49,8 +50,15 @@ const categories: { label: string; value: SkillCategory | "all" }[] = [
 ];
 
 export default function Skills() {
+  const { resolvedTheme } = useTheme();
+  const [headingColor, setHeadingColor] = useState('text-white'); // Default to white for initial render
   const [filter, setFilter] = useState<SkillCategory | "all">("all");
   const [animatedLevels, setAnimatedLevels] = useState<number[]>(skills.map(() => 0));
+
+  // Update heading color when theme changes
+  useEffect(() => {
+    setHeadingColor(resolvedTheme === 'dark' || resolvedTheme === undefined ? 'text-white' : 'text-gray-900');
+  }, [resolvedTheme]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -64,8 +72,8 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-12 sm:py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-2">Skills & Expertise</h2>
+      <div className="max-w-8xl mx-auto px-3 sm:px-6">
+        <h2 className={`text-2xl sm:text-3xl font-bold mb-2 ${headingColor}`}>Skills & Expertise</h2>
         <p className="text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base">
           A snapshot of what I build: frontend stacks, AI agents, and tooling I use to ship
           fast, reliable products.
@@ -95,10 +103,14 @@ export default function Skills() {
             {filteredSkills.map((skill, i) => (
               <div
                 key={skill.name}
-                className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white/5 p-3 sm:p-4 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors gap-3 sm:gap-0"
+                className={`flex flex-col sm:flex-row items-start sm:items-center justify-between ${
+                  resolvedTheme === 'dark' || resolvedTheme === undefined
+                    ? 'bg-white/5 border border-white/10 hover:bg-white/10'
+                    : 'bg-gray-100 border border-gray-200 hover:bg-gray-200'
+                } p-3 sm:p-4 rounded-2xl transition-colors gap-3 sm:gap-0`}
               >
                 <div className="w-full sm:w-auto">
-                  <h4 className="font-semibold text-white text-sm sm:text-base">
+                  <h4 className={`font-semibold ${headingColor} text-sm sm:text-base`}>
                     {skill.name}{" "}
                     {skill.sub && (
                       <span className="text-xs text-gray-400 font-medium">
@@ -112,13 +124,21 @@ export default function Skills() {
                 </div>
 
                 <div className="w-full sm:w-44 ml-0 sm:ml-4">
-                  <div className="w-full h-1.5 sm:h-2 bg-white/10 rounded-full overflow-hidden">
+                  <div className={`w-full h-1.5 sm:h-2 ${
+                    resolvedTheme === 'dark' || resolvedTheme === undefined
+                      ? 'bg-white/10'
+                      : 'bg-gray-300'
+                  } rounded-full overflow-hidden`}>
                     <div
                       className="h-full bg-gradient-to-r from-violet-600 to-blue-500 rounded-full transition-all duration-700 ease-out"
                       style={{ width: `${animatedLevels[i]}%` }}
                     ></div>
                   </div>
-                  <p className="text-xs text-right text-gray-300 mt-1">
+                  <p className={`text-xs text-right ${
+                    resolvedTheme === 'dark' || resolvedTheme === undefined
+                      ? 'text-gray-300'
+                      : 'text-gray-600'
+                  } mt-1`}>
                     {animatedLevels[i]}%
                   </p>
                 </div>
@@ -128,17 +148,29 @@ export default function Skills() {
 
           {/* Right: Tags and Summary */}
           <aside className="space-y-4 sm:space-y-6 mt-4 sm:mt-0">
-            <div className="bg-white/5 p-4 sm:p-5 rounded-2xl border border-white/10">
-              <h3 className="font-semibold mb-2 text-white text-sm sm:text-base">Quick Summary</h3>
-              <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            <div className={`${
+              resolvedTheme === 'dark' || resolvedTheme === undefined
+                ? 'bg-white/5 border border-white/10'
+                : 'bg-gray-100 border border-gray-200'
+            } p-4 sm:p-5 rounded-2xl`}>
+              <h3 className={`font-semibold mb-2 ${headingColor} text-sm sm:text-base`}>Quick Summary</h3>
+              <p className={`${
+                resolvedTheme === 'dark' || resolvedTheme === undefined
+                  ? 'text-gray-400'
+                  : 'text-gray-600'
+              } text-xs sm:text-sm leading-relaxed`}>
                 Frontend-focused: Next.js, React, TypeScript, Tailwind. <br />
-                AI & Agents: LangChain, prompt engineering, small autonomous workflows. <br />
+                AI & Agents: OpenAIAgentsSDK, prompt engineering, small autonomous workflows. <br />
                 Tools: Git, CI/CD, Python for AI tasks.
               </p>
             </div>
 
-            <div className="bg-white/5 p-4 sm:p-5 rounded-2xl border border-white/10">
-              <h3 className="font-semibold mb-3 text-white text-sm sm:text-base">Skill Tags</h3>
+            <div className={`${
+              resolvedTheme === 'dark' || resolvedTheme === undefined
+                ? 'bg-white/5 border border-white/10'
+                : 'bg-gray-100 border border-gray-200'
+            } p-4 sm:p-5 rounded-2xl`}>
+              <h3 className={`font-semibold mb-3 ${headingColor} text-sm sm:text-base`}>Skill Tags</h3>
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {[
                   "HTML/CSS",
@@ -158,7 +190,11 @@ export default function Skills() {
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs sm:text-sm px-2 py-1 rounded-full bg-white/10 text-gray-300 border border-white/10"
+                    className={`text-xs sm:text-sm px-2 py-1 rounded-full ${
+                      resolvedTheme === 'dark' || resolvedTheme === undefined
+                        ? 'bg-white/10 text-gray-300 border border-white/10'
+                        : 'bg-gray-200 text-gray-700 border border-gray-300'
+                    }`}
                   >
                     {tag}
                   </span>
