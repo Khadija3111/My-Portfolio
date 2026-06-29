@@ -3,16 +3,13 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import Project from "./project/page";
 import Education from "./education/page";
 import Skills from "@/components/skills";
+import About from "./about/page";
 
 export default function Home() {
-  const content = `I’m a developer with experience building full-stack web applications, AI agents, and production-ready systems. My core frontend stack includes Next.js, TypeScript, JavaScript, Tailwind CSS, and Sanity CMS, but I also design and implement backends, databases, and cloud deployments.
+  const content = `I'm a full-stack developer who builds complete products — responsive frontends, FastAPI backends, PostgreSQL databases, authentication systems, and cloud deployments. My core stack is Next.js, TypeScript, Tailwind CSS, and Sanity CMS, and I'm comfortable owning a feature from the first line of code to production.
 
- I actively build full-stack applications, connecting modern frontends with FastAPI backends, PostgreSQL databases, authentication, and deployed cloud services. 
-  building APIs, integrating data, and shipping real features.
-
- Recently, I’ve been working with AI agents and intelligent systems, building assistants that use structured prompts, tools, memory, and guardrails to solve real problems. I enjoy merging AI capabilities with usable interfaces so products don’t just look good—but work intelligently.
- 
- I’m looking for opportunities where I can contribute to real products, grow as a full-stack developer, and build intelligent systems that create real value.`;
+ Lately I've been going deep on AI — building agents with the OpenAI Agents SDK, designing RAG pipelines for grounded question answering, and engineering the prompts, memory, and guardrails that make intelligent systems actually reliable. I focus on merging AI capabilities with usable interfaces so products don't just look smart — they work smart.
+ I'm looking for a team where I can ship real features, contribute to products that matter, and keep growing as a developer. I want to build things that are technically solid, genuinely useful, and worth being proud of.`;
 
   return (
     <section
@@ -44,16 +41,17 @@ export default function Home() {
               pb-1
               md:pb-6
             
-            ">  About Me
+            ">  
           </h1>
-
-          <MDXRemote source={content} />
+<About/>
+          {/* <MDXRemote source={content} /> */}
         </div>
       </div>
 
-      <Education />
+      
       <Skills />
       <Project />
+      <Education />
     </section>
   );
 }
