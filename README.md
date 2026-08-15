@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio — Frontend Developer & AI Agent Builder
+# 🌐 Personal Portfolio — Web developer & AI Agent Builder
 
 [Live Demo](https://my-portfolio-git-main-khadija3111s-projects.vercel.app/)
 
