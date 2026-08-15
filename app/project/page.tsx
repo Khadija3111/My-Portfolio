@@ -213,7 +213,7 @@ export default function Projects() {
       <h2 className="text-2xl sm:text-3xl font-bold">Projects</h2>
       </div>
       <p className="text-gray-400 text-sm sm:text-base mb-8 sm:mb-10">
-        Things I've built — from AI-native tools and full-stack apps to quick experiments.
+        Things I&#39;ve built — from AI-native tools and full-stack apps to quick experiments.
       </p>
 
       {/* Featured row */}

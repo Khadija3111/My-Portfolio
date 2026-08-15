@@ -22,10 +22,11 @@ interface Skill {
 const skills: Skill[] = [
   { name: "HTML / CSS / JavaScript", sub: "Semantic markup & modern JS", level: 90, category: "frontend" },
   { name: "TypeScript", sub: "Types & generics", level: 80, category: "frontend" },
+  { name: "Python (for AI)", sub: "Scripting & data handling", level: 65, category: "ai" },
   { name: "React / Next.js", sub: "SSR & App Router", level: 90, category: "frontend" },
   { name: "Tailwind CSS", sub: "Design-to-code & responsive layouts", level: 88, category: "frontend" },
-  { name: "Python (for AI)", sub: "Scripting & data handling", level: 65, category: "ai" },
   { name: "AI Agents (OpenAI Agents SDK)", sub: "Prototyping assistants & pipelines", level: 75, category: "ai" },
+  { name: "Openclaw ", sub: "Personal ai assistant", level: 75, category: "ai" },
   { name: "OpenAI & Prompting", sub: "Prompt design & system messages", level: 70, category: "ai" },
   { name: "AI Driven Development", sub: "Building production apps using AI", level: 80, category: "ai" },
   { name: "RAG Chatbots", sub: "Retrieval-augmented generation", level: 80, category: "ai" },
@@ -70,6 +71,7 @@ const tagMeta: Record<string, string> = {
   "TypeScript":           "bg-blue-400/10 text-blue-300 border-blue-400/20",
   "Tailwind CSS":         "bg-cyan-500/10 text-cyan-300 border-cyan-500/20",
   "AI Agents":            "bg-emerald-500/10 text-emerald-300 border-emerald-500/20",
+  "Open claw":            "bg-emerald-500/10 text-emerald-300 border-emerald-500/20",
   "Prompt Engineering":   "bg-emerald-400/10 text-emerald-300 border-emerald-400/20",
   "Context Engineering":  "bg-teal-500/10 text-teal-300 border-teal-500/20",
   "FastAPI":              "bg-sky-500/10 text-sky-300 border-sky-500/20",
@@ -77,6 +79,7 @@ const tagMeta: Record<string, string> = {
   "Docker":               "bg-blue-600/10 text-blue-300 border-blue-600/20",
   "Python":               "bg-yellow-500/10 text-yellow-300 border-yellow-500/20",
   "Figma → Code":         "bg-pink-500/10 text-pink-300 border-pink-500/20",
+
 };
 
 const defaultTagStyle = "bg-white/5 text-gray-300 border-white/10";

@@ -61,7 +61,7 @@ export default function About() {
         <div className="space-y-4 mb-8">
           {[
             {
-              text: "I'm a developer who builds things end-to-end — from pixel-perfect interfaces to the APIs, databases, and deployments that power them. My core stack is Next.js, TypeScript, Tailwind CSS, and FastAPI, and I'm comfortable owning a feature from design to production.",
+              text: "I&#39;m a developer who builds things end-to-end — from pixel-perfect interfaces to the APIs, databases, and deployments that power them. My core stack is Next.js, TypeScript, Tailwind CSS, and FastAPI, and I&#39;m comfortable owning a feature from design to production.",
               delay: 100,
             },
             {

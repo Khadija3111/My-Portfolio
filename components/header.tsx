@@ -1,35 +1,36 @@
-import Link from 'next/link'
-import { ThemeToggle } from './theme-toggle'
-import { JSX, SVGProps } from 'react'
-// import { useState } from 'react'
+"use client";
+
+import Link from "next/link";
+import { ThemeToggle } from "./theme-toggle";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { JSX, SVGProps } from "react";
 
 const navigation = [
- 
-  
   {
-    name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/khadija-abdulbasit-538163290/',
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/khadija-abdulbasit-538163290/",
     icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
       <svg fill='currentColor' viewBox='0 0 448 512' {...props}>
         <path
           fill='currentColor'
           d='M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'
-        ></path>
+        />
       </svg>
-    )
+    ),
   },
   {
-    name: 'X',
-    href: '#',
+    name: "X",
+    href: "#",
     icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
       <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
         <path d='M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z' />
       </svg>
-    )
+    ),
   },
   {
-    name: 'GitHub',
-    href: 'https://github.com/Khadija3111',
+    name: "GitHub",
+    href: "https://github.com/Khadija3111",
     icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
       <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
         <path
@@ -38,59 +39,102 @@ const navigation = [
           clipRule='evenodd'
         />
       </svg>
-    )
+    ),
   },
-  
-]
+];
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className='fixed inset-x-0 top-0 z-50 bg-background/75 py-6 backdrop-blur-sm '>
-      <nav className='container flex max-w-3xl   items-center justify-self-start gap-96 pl-20'>
+    <header className="fixed inset-x-0 top-0 z-50 bg-background/75 py-6 backdrop-blur-sm">
+      <nav className="container flex items-center justify-between px-4 sm:px-6">
+        {/* Optional brand/logo */}
+        <Link href="/" className="text-lg font-semibold text-foreground">
+          KH
+        </Link>
 
-       
-  
-        
-
-        <ul className='flex pl-16 items-center gap-8 text-sm font-light text-muted-foreground sm:gap-10'>
+        {/* Desktop navigation */}
+        <ul className="hidden sm:flex items-center gap-6 text-sm font-light text-muted-foreground">
           <li>
-             <ThemeToggle  />
+            <ThemeToggle />
           </li>
-          <li className='transition-colors hover:text-foreground'>
-            <Link href='/'>Home</Link>
+          <li className="transition-colors hover:text-foreground">
+            <Link href="/">Home</Link>
           </li>
-          <li className='transition-colors hover:text-foreground'>
-            <Link href='/skills'>Skills</Link>
+          <li className="transition-colors hover:text-foreground">
+            <Link href="/skills">Skills</Link>
           </li>
-          <li className='transition-colors hover:text-foreground'>
-            <Link href='/project'>Projects</Link>
+          <li className="transition-colors hover:text-foreground">
+            <Link href="/project">Projects</Link>
           </li>
-          <li className='transition-colors hover:text-foreground'>
-            <Link href='/education'>Education</Link>
+          <li className="transition-colors hover:text-foreground">
+            <Link href="/education">Education</Link>
           </li>
-          
-          
         </ul>
 
-       <div className='flex justify-center space-x-9 md:order-2'>
-         
-                   {navigation.map(item => (
-              <a
-                key={item.name}
-                href={item.href}
-                target='_blank'
-                rel='noreferrer noopener'
-                className='text-muted-foreground hover:text-foreground'
-              >
-                <span className='sr-only'>{item.name}</span>
-                <item.icon aria-hidden='true' className='h-5 w-5' />
-              </a>
-            ))}
-            
-          </div>
+        {/* Desktop social icons */}
+        <div className="hidden sm:flex space-x-4">
+          {navigation.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-muted-foreground hover:text-foreground"
+            >
+              <span className="sr-only">{item.name}</span>
+              <item.icon aria-hidden="true" className="h-5 w-5" />
+            </a>
+          ))}
+        </div>
 
+        {/* Mobile menu button */}
+        <button
+          className="sm:hidden p-2 text-muted-foreground"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+        >
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </nav>
-     
+
+      {/* Mobile dropdown menu */}
+      {menuOpen && (
+        <div className="sm:hidden bg-background/95 backdrop-blur-md absolute top-full left-0 w-full shadow-lg border-t border-white/10">
+          <ul className="flex flex-col items-center gap-4 py-4 text-sm font-light text-muted-foreground">
+            <li>
+              <ThemeToggle />
+            </li>
+            <li className="transition-colors hover:text-foreground">
+              <Link href="/">Home</Link>
+            </li>
+            <li className="transition-colors hover:text-foreground">
+              <Link href="/skills">Skills</Link>
+            </li>
+            <li className="transition-colors hover:text-foreground">
+              <Link href="/project">Projects</Link>
+            </li>
+            <li className="transition-colors hover:text-foreground">
+              <Link href="/education">Education</Link>
+            </li>
+            <div className="flex space-x-4 pt-2">
+              {navigation.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon aria-hidden="true" className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
+          </ul>
+        </div>
+      )}
     </header>
-  )
+  );
 }

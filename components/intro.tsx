@@ -40,15 +40,15 @@ return (
     {/* Text side — unchanged */}
     <div className="flex-1 z-10">
       <p className="text-xs tracking-widest uppercase text-rose-600 dark:text-red-400 font-medium mb-2 animate-pop-in animation-delay-1">
-        Full-stack & AI developer
+        Full-stack & AI agents developer
       </p>
       <p
-        className="text-2xl sm:text-3xl font-light text-foreground text-center sm:text-left animate-pop-in animation-delay-2"
+        className="text-2xl sm:text-3xl font-light text-foreground text-center sm:text-left"
       >
         Hey,
       </p>
       <h1
-        className="title no-underline text-center sm:text-left mt-1 animate-pop-in animation-delay-3"
+        className="title no-underline text-center sm:text-left mt-1"
         style={{
           background: "linear-gradient(120deg, var(--foreground) 40%, #534AB7 100%)",
           WebkitBackgroundClip: "text",
@@ -56,7 +56,7 @@ return (
           backgroundClip: "text",
         }}
       >
-        I'm Khadija.
+        I&#39;m Khadija.
       </h1>
       <p className="mt-3 font-light text-muted-foreground text-center sm:text-left max-w-md">
         I build full-stack web applications and AI-driven systems. From clean,

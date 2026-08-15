@@ -11,11 +11,7 @@ interface EducationItem {
 }
 
 const educationData: EducationItem[] = [
-  {
-    institution: "Khursheed Govt Girls Degree College",
-    degree: "Intermediate in Medical Science",
-    year: "2021 – 2023",
-  },
+  
   {
     institution: "Governor Sindh Initiative, GIAIC",
     degree: "Cloud Native Applied Agentic AI",
@@ -23,10 +19,15 @@ const educationData: EducationItem[] = [
     active: true,
   },
   {
-    institution: "Jamia Al Marifa Al Alamiya",
-    degree: "B.Sc. (Hons) in Islamic Studies",
-    year: "2023 – Present",
+    institution: "Virtual University of Pakistan",
+    degree: "BSCS. Computer Science",
+    year: "2026 ",
     active: true,
+  },
+  {
+    institution: "Khursheed Govt Girls Degree College",
+    degree: "Intermediate in Medical Science",
+    year: "2021 – 2023",
   },
 ];
 
