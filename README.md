@@ -96,7 +96,38 @@ vercel
 | **AI/Agents** | OpenAI Agents SDK, LangChain (learning phase) |
 
 ---
+## 🧩 Skills & Expertise
 
+Below is a concise summary of the key skills and areas of expertise demonstrated in this portfolio.
+
+**Frontend Development**
+- HTML / CSS / JavaScript (90% proficiency)
+- TypeScript (80%)
+- React / Next.js (90%)
+- Tailwind CSS (88%)
+
+**AI & Agents**
+- OpenAI Agents SDK (75%)
+- LangChain & RAG pipelines (learning phase)
+- Prompt engineering & context management (70%)
+- AI‑driven development (80%)
+
+**Backend Development**
+- FastAPI (70%)
+- PostgreSQL & SQLModel / SQLAlchemy (60%)
+- API design & authentication (JWT, OAuth basics)
+
+**DevOps & Tooling**
+- Docker & Docker Compose
+- Vercel, Railway, Cloud Run deployments
+- Git & GitHub workflow
+- Testing with Pytest
+
+**Additional Tools**
+- Cursor (AI‑powered code editor)
+- Spec‑driven development, UI/UX design
+
+---
 ## 🤝 Contributing
 
 Feel free to open issues or submit pull requests if you'd like to improve the portfolio, add new projects, or suggest design enhancements. All contributions are welcome!
