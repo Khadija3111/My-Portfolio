@@ -143,5 +143,5 @@ This project is licensed under the **MIT License** – see the `LICENSE` file fo
 ## 📬 Contact
 
 - **Website**: https://my-portfolio-git-main-khadija3111s-projects.vercel.app/
-- **GitHub**: https://github.com/your-username/my-portfolio
+- **GitHub**: (https://my-portfolio-git-main-khadija3111s-projects.vercel.app/)
 - **Email**: your.email@example.com
