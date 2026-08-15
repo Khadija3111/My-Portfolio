@@ -136,7 +136,7 @@ return (
         className="absolute -right-7 top-4 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-xl px-3 py-1.5 text-xs font-medium text-zinc-600 dark:text-zinc-300 shadow-md whitespace-nowrap"
         style={{ animation: "floatY 4s ease-in-out infinite alternate", animationDelay: "-2s" }}
       >
-        ⚡ n8n · OpenClaw
+        ⚡ Claude code · OpenClaw
       </div>
     </div>
 
